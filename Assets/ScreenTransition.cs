@@ -17,8 +17,13 @@ public class ScreenTransition : MonoBehaviour
 
     }
 
-    public void PushButton()
+    public void ChangeVariableScene()
     {
         SceneManager.LoadScene("VariableScene");
+    }
+
+    public void ChangeTextScene()
+    {
+        SceneManager.LoadScene("TextScene");
     }
 }

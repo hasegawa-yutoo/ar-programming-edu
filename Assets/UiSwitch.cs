@@ -10,9 +10,14 @@ public class UiSwitch : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void Switch()
+    public void SwitchActive()
     {
         gameObject.SetActive(true);
+    }
+
+    public void SwitchInactive()
+    {
+        gameObject.SetActive(false);
     }
 
 }

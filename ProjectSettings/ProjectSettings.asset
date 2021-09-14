@@ -129,10 +129,11 @@ PlayerSettings:
     Others: 1
   bundleVersion: 0.1
   preloadedAssets:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 5149613649923979495, guid: 5cf301554eedfcb47a1f0d26b5819630, type: 2}
   - {fileID: 791996501272086994, guid: d09ad718ba9bfa64598f4548153848f3, type: 2}
   - {fileID: 4815599377345187341, guid: 023071e96a4fa2542a3fc830fd80b106, type: 2}
-  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -612,7 +613,7 @@ PlayerSettings:
   metroCertificateNotAfter: 00cdf1935186d801
   metroApplicationDescription: Template_3D
   wsaImages: {}
-  metroTileShortName: hololens2-sample
+  metroTileShortName: AR programming EDU
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
