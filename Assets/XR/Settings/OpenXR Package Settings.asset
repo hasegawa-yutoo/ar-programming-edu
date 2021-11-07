@@ -736,11 +736,11 @@ MonoBehaviour:
   - {fileID: -9140268406190799966}
   - {fileID: 4105549890651779977}
   - {fileID: 8346561545756228126}
-  - {fileID: -8261993107717071274}
-  - {fileID: 8597986706203242006}
-  - {fileID: -6305668710322998775}
   - {fileID: 2601293989096365541}
+  - {fileID: -6305668710322998775}
+  - {fileID: -8261993107717071274}
   - {fileID: 7044798349865361097}
+  - {fileID: 8597986706203242006}
   m_renderMode: 1
   m_depthSubmissionMode: 0
 --- !u!114 &-2586950287750995435
@@ -1029,8 +1029,8 @@ MonoBehaviour:
   - {fileID: 6779191365666458108}
   - {fileID: 2524570528550196334}
   - {fileID: -882060054635402869}
-  - {fileID: -7753828394779396487}
   - {fileID: -6876527372354894852}
+  - {fileID: -7753828394779396487}
   - {fileID: -7878831416530993218}
   m_renderMode: 1
   m_depthSubmissionMode: 0
@@ -1608,10 +1608,10 @@ MonoBehaviour:
   - {fileID: -6452722267504958229}
   - {fileID: 8790501965262415327}
   - {fileID: -2002110747163958509}
-  - {fileID: -3597780148144024726}
   - {fileID: 8787962041449520680}
-  m_renderMode: 1
-  m_depthSubmissionMode: 0
+  - {fileID: -3597780148144024726}
+  m_renderMode: 0
+  m_depthSubmissionMode: 1
 --- !u!114 &5404894912851852492
 MonoBehaviour:
   m_ObjectHideFlags: 0
