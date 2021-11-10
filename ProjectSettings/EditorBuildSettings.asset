@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IfScene.unity
     guid: 5048ae264821c1043aeb5d5f9a015b68
+  - enabled: 1
+    path: Assets/Scenes/IfTextScene.unity
+    guid: aeaa0b2f256518542a3901d0ec9408d4
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 023071e96a4fa2542a3fc830fd80b106, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d09ad718ba9bfa64598f4548153848f3, type: 2}

@@ -32,18 +32,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             }
             if (keyDown)
             {
-                transform.position += transform.forward * speed * Time.deltaTime;
-                animator.SetBool("is_running", true);
+                transform.position -= transform.forward * speed * Time.deltaTime;
+                animator.SetBool("is_back", true);
             }
             if (keyLeft)
             {
-                transform.position += transform.forward * speed * Time.deltaTime;
-                animator.SetBool("is_running", true);
+                transform.Rotate(0, -0.3f, 0);
             }
             if (keyRight)
             {
-                transform.position += transform.forward * speed * Time.deltaTime;
-                animator.SetBool("is_running", true);
+                transform.Rotate(0, 0.3f, 0);
             }
         }
 
@@ -51,7 +49,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             keyUp = true;
             animator.SetBool("is_running", true);
-            transform.rotation = Quaternion.identity;
         }
         public void endUp()
         {
@@ -62,22 +59,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public void keepDown()
         {
             keyDown = true;
-            animator.SetBool("is_running", true);
-            transform.rotation = Quaternion.identity;
-            transform.Rotate(0, 180, 0);
+            animator.SetBool("is_back", true);
         }
         public void endDown()
         {
             keyDown = false;
-            animator.SetBool("is_running", false);
+            animator.SetBool("is_back", false);
         }
 
         public void keepLeft()
         {
             keyLeft = true;
-            animator.SetBool("is_running", true);
-            transform.rotation = Quaternion.identity;
-            transform.Rotate(0, 270, 0);
         }
         public void endLeft()
         {
@@ -88,9 +80,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public void keepRight()
         {
             keyRight = true;
-            animator.SetBool("is_running", true);
-            transform.rotation = Quaternion.identity;
-            transform.Rotate(0, 90, 0);
         }
         public void endRight()
         {
