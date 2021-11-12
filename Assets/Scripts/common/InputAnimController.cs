@@ -17,9 +17,19 @@ public class InputAnimController : MonoBehaviour
         animator.SetBool("is_active", true);
     }
 
+    public void ActivateBackAnimation()
+    {
+        animator.SetBool("is_active", false);
+    }
+
     public void ActivateAnimation2()
     {
         animator.SetBool("is_active2", true);
+    }
+
+    public void ActivateBackAnimation2()
+    {
+        animator.SetBool("is_active2", false);
     }
 
     public void ActivateAnimation3()

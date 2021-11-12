@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
     public class ThirdPersonRunController : MonoBehaviour
     {
+        
         private InputDefault Default;
         private InputIf MaxCount;
         private InputIncrement Increment;
+    
+        private Input01 Zero;
+        private Input02 Second;
+        private Input03 Third;
 
         private Animator animator;
         private bool flag = false;
@@ -42,10 +48,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             animator.SetBool("is_running", true);
 
             // インスタンス化
-            this.Default = FindObjectOfType<InputDefault>();
-            this.MaxCount = FindObjectOfType<InputIf>();
-            this.Increment = FindObjectOfType<InputIncrement>();
-            count = MaxCount.YourIf - Default.YourDefault;
+            if (SceneManager.GetActiveScene().name == "LoopScene")
+            {
+                this.Default = FindObjectOfType<InputDefault>();
+                this.MaxCount = FindObjectOfType<InputIf>();
+                this.Increment = FindObjectOfType<InputIncrement>();
+                count = MaxCount.YourIf - Default.YourDefault;
+            }
 
             Invoke(nameof(StopRun), count);
             if(count == 5 && Increment.YourIncrement == "++")
@@ -53,6 +62,38 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
                 Invoke(nameof(CorrectActivate), count);
             } else
+            {
+                Invoke(nameof(IncorrectActivate), count);
+            }
+        }
+
+        public void RunWhile()
+        {
+            flag = true;
+            animator.SetBool("is_running", true);
+
+            // インスタンス化
+            if (SceneManager.GetActiveScene().name == "LoopScene2")
+            {
+                this.Zero = FindObjectOfType<Input01>();
+                this.Second = FindObjectOfType<Input02>();
+                this.Third = FindObjectOfType<Input03>();
+                if(Second.YourSecond == "+")
+                {
+                    count = Zero.YourZero / Third.YourThird;
+                } else
+                {
+                    count = 0;
+                }
+            }
+
+            Invoke(nameof(StopRun), count);
+            if (count == 4)
+            {
+
+                Invoke(nameof(CorrectActivate), count);
+            }
+            else
             {
                 Invoke(nameof(IncorrectActivate), count);
             }
