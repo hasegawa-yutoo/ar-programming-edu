@@ -26,20 +26,20 @@ public class ShowWhile : MonoBehaviour
     {
         this.VarZero = FindObjectOfType<Input01>();
         whileZero = VarZero.YourZero;
-        WhileSentence.text = "int second = 0;\n\nwhile (second < " + whileZero + "){\n  `Unity‚¿‚á‚ñ‚ª4•bŠÔ‘–‚éˆ—`\n  second [–â‚Q]= [–â‚R];}";
+        WhileSentence.text = "int second = 0;\nwhile (second < " + whileZero + " && second >= 0){\n  `Unity‚¿‚á‚ñ‚ª1•bŠÔ‘–‚éˆ—`\n  second [–â‚Q]= [–â‚R];\n  System.out.println(second);}";
     }
 
     public void CompleteSecond()
     {
         this.VarSecond = FindObjectOfType<Input02>();
         whileSecond = VarSecond.YourSecond;
-        WhileSentence.text = "int second = 0;\n\nwhile (second < " + whileZero + "){\n  `Unity‚¿‚á‚ñ‚ª4•bŠÔ‘–‚éˆ—`\n  second " + whileSecond + "= [–â‚R];}";
+        WhileSentence.text = "int second = 0;\nwhile (second < " + whileZero + " && second >= 0){\n  `Unity‚¿‚á‚ñ‚ª1•bŠÔ‘–‚éˆ—`\n  second " + whileSecond + "= [–â‚R];\n  System.out.println(second);}";
     }
 
     public void CompleteThird()
     {
         this.VarThird = FindObjectOfType<Input03>();
         whileThird = VarThird.YourThird;
-        WhileSentence.text = "int second = 0;\n\nwhile (second < " + whileZero + "){\n  `Unity‚¿‚á‚ñ‚ª4•bŠÔ‘–‚éˆ—`\n  second " + whileSecond + "= " + whileThird + ";}";
+        WhileSentence.text = "int second = 0;\nwhile (second < " + whileZero + " && second >= 0){\n  `Unity‚¿‚á‚ñ‚ª1•bŠÔ‘–‚éˆ—`\n  second " + whileSecond + "= " + whileThird + ";\n  System.out.println(second);}";
     }
 }

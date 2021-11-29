@@ -18,11 +18,17 @@ EditorBuildSettings:
     path: Assets/Scenes/VariableScene2.unity
     guid: d7bcd38a66e90ca43a2fe7e344d6b90e
   - enabled: 1
+    path: Assets/Scenes/IfTextScene.unity
+    guid: aeaa0b2f256518542a3901d0ec9408d4
+  - enabled: 1
     path: Assets/Scenes/IfScene.unity
     guid: 5048ae264821c1043aeb5d5f9a015b68
   - enabled: 1
-    path: Assets/Scenes/IfTextScene.unity
-    guid: aeaa0b2f256518542a3901d0ec9408d4
+    path: Assets/Scenes/LoopScene.unity
+    guid: c81b7634af2aa0c42a28b6b76d42af51
+  - enabled: 1
+    path: Assets/Scenes/LoopScene2.unity
+    guid: 264d852a1e440a54e9bf13254251de4b
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 023071e96a4fa2542a3fc830fd80b106, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d09ad718ba9bfa64598f4548153848f3, type: 2}

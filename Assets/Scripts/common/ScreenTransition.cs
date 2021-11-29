@@ -46,4 +46,14 @@ public class ScreenTransition : MonoBehaviour
     {
         SceneManager.LoadScene("IfTextScene");
     }
+
+    public void ChangeLoopScene()
+    {
+        SceneManager.LoadScene("LoopScene");
+    }
+
+    public void ChangeLoopScene2()
+    {
+        SceneManager.LoadScene("LoopScene2");
+    }
 }
