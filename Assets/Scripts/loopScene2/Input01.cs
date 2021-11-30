@@ -11,7 +11,6 @@ public class Input01 : MonoBehaviour
     private TMP_InputField FieldZero;
     private int yourZero;
     string inputZero;
-    public GameObject complete01;
 
     public int YourZero
     {
@@ -28,13 +27,6 @@ public class Input01 : MonoBehaviour
     public void EndZero()
     {
         inputZero = FieldZero.text;
-        if (!(inputZero == ""))
-        {
-            complete01.SetActive(true);
-            yourZero = Convert.ToInt32(inputZero);
-        } else
-        {
-            complete01.SetActive(false);
-        }
+        yourZero = Convert.ToInt32(inputZero);
     }
 }

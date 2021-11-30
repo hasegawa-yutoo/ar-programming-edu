@@ -11,7 +11,6 @@ public class Input02 : MonoBehaviour
     private TMP_InputField FieldSecond;
     private string yourSecond;
     string inputSecond;
-    public GameObject complete02;
 
     public string YourSecond
     {
@@ -28,15 +27,6 @@ public class Input02 : MonoBehaviour
     public void EndSecond()
     {
         inputSecond = FieldSecond.text;
-
-        if (!(inputSecond == ""))
-        {
-            complete02.SetActive(true);
-            yourSecond = inputSecond;
-        }
-        else
-        {
-            complete02.SetActive(false);
-        }
+        yourSecond = inputSecond;
     }
 }
