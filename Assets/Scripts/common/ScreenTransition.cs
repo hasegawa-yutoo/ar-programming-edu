@@ -42,6 +42,11 @@ public class ScreenTransition : MonoBehaviour
         SceneManager.LoadScene("IfScene");
     }
 
+    public void ChangeIfScene2()
+    {
+        SceneManager.LoadScene("IfScene2");
+    }
+
     public void ChangeIfTextScene()
     {
         SceneManager.LoadScene("IfTextScene");

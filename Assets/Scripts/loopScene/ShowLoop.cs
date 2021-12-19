@@ -33,14 +33,14 @@ public class ShowLoop : MonoBehaviour
     {
         this.VarIf = FindObjectOfType<InputIf>();
         loopIf = VarIf.YourIf;
-        ForSentence.text = "for( int i = " + loopDefault + "; i < " + loopIf + "; i›› ){\n    `Unity‚¿‚á‚ñ‚ª‚P•bŠÔ‘–‚éˆ—`\n}";
+        ForSentence.text = "for( int i = " + loopDefault + "; i < " + loopIf + "; iy–â3z ){\n    `Unity‚¿‚á‚ñ‚ª‚P•bŠÔ‘–‚éˆ—`\n}";
     }
 
     public void CompleteDefault()
     {
         this.VarDefault = FindObjectOfType<InputDefault>();
         loopDefault = VarDefault.YourDefault;
-        ForSentence.text = "for( int i = " + loopDefault + "; i < ››; i›› ){\n    `Unity‚¿‚á‚ñ‚ª‚P•bŠÔ‘–‚éˆ—`\n}";
+        ForSentence.text = "for( int i = " + loopDefault + "; i < y–â2z; iy–â3z ){\n    `Unity‚¿‚á‚ñ‚ª‚P•bŠÔ‘–‚éˆ—`\n}";
     }
 
 }

@@ -17,6 +17,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         bool keyLeft;
         bool keyRight;
         private Animator animator;
+        private int Up = 0;
+        private int Down = 0;
+        private int Left = 0;
+        private int Right = 0;
+        [SerializeField] GameObject CompleteButton;
+        [SerializeField] GameObject AgainButton;
 
         void Start()
         {
@@ -29,19 +35,60 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 transform.position += transform.forward * speed * Time.deltaTime;
                 animator.SetBool("is_running", true);
+                if(Up != 1)
+                {
+                    Up++;
+                }
+                if (CompleteButton && AgainButton)
+                {
+                    CompleteIfTutorial();
+                }
             }
             if (keyDown)
             {
                 transform.position -= transform.forward * speed * Time.deltaTime;
                 animator.SetBool("is_back", true);
+                if(Down != 1)
+                {
+                    Down++;
+                }
+                if (CompleteButton && AgainButton)
+                {
+                    CompleteIfTutorial();
+                }
             }
             if (keyLeft)
             {
-                transform.Rotate(0, -0.3f, 0);
+                transform.Rotate(new Vector3(0, -1.0f, 0));
+                if(Left != 1)
+                {
+                    Left++;
+                }
+                if (CompleteButton && AgainButton)
+                {
+                    CompleteIfTutorial();
+                }
             }
             if (keyRight)
             {
-                transform.Rotate(0, 0.3f, 0);
+                transform.Rotate(new Vector3(0, 1.0f, 0));
+                if(Right != 1)
+                {
+                    Right++;
+                }
+                if (CompleteButton && AgainButton)
+                {
+                    CompleteIfTutorial();
+                }
+            }
+        }
+
+        void CompleteIfTutorial()
+        {
+            if(Up == 1 && Down == 1 && Left == 1 && Right == 1)
+            {
+                CompleteButton.SetActive(true);
+                AgainButton.SetActive(true);
             }
         }
 
